@@ -1,0 +1,11 @@
+
+[Unit]
+Description=High-performance, schema-free, document-oriented database
+After=network.target
+
+[Service]
+User=mongod
+ExecStart=/opt/bin/mongodb/mongod --config /home/mongod/mongod.conf.yaml
+
+[Install]
+WantedBy=multi-user.target

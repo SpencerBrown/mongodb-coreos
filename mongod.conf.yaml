@@ -1,0 +1,30 @@
+#processManagement:
+#  fork: true
+# we want fork off, because systemd handles process management for us
+
+storage:
+  dbPath: /home/mongod/data
+  journal:
+    enabled: true
+  engine: wiredTiger
+#  wiredTiger:
+#    engineConfig:
+#      cacheSizeGB: 1
+
+systemLog:
+  destination: file
+  path: /home/mongod/data/mongod.log
+
+net:
+  port: 27017
+  unixDomainSocket:
+    enabled: false
+
+#security:
+#  authorization: enabled
+
+#replication:
+#  replSetName: rs
+
+#sharding:
+#  clusterRole: shardsvr

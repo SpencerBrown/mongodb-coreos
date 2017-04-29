@@ -1,0 +1,7 @@
+#cloud-config
+
+ssh_authorized_keys:
+  - "--put your SSH putlic key here--"
+
+hostname: server-a
+
